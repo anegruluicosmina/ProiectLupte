@@ -1,0 +1,24 @@
+     getPlayerHealth = document.querySelector(".health-player"),
+     getEnemyHealth = document.querySelector(".health-enemy"),
+
+    //initiae fight
+
+    
+        if(getPlayerSpeed >= getEnemySpeed){
+            //calculation of the attack
+            let playerAttackValues = playerAttack(),
+            let totalDamage = playerAttackValues[0] * playerAttackValues[1],
+            enemy.health = enemy.getEnemyHealth - totalDamage;
+            // showing the result
+            let getArena = document.querySelector (".arena");
+            getArena.innerHTML = "<h3> You hit " + playerAttackValues[1] + "times damage " + playerAttackValues[0];
+            
+            if(enemy.health <= 0){
+            getArena.innerHTML = "<h3> You hit " + playerAttackValues[1] + " damage " + playerAttackValues[0] + ' times.';
+            getPlayerHealth.innerHTML = 'Health: ' +player.health;
+            getEnemyHealth.innerHTML = 'health: 0';
+            }else{
+
+            }
+        }
+    

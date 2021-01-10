@@ -1,0 +1,255 @@
+tt5166682@gmail.com	
+test_0test
+
+        if(password_verify($answer1, $row['answer1']) && password_verify($answer2, $row['answer2'])){
+            header('Location: ../resetpwd.php?success');
+            exit();
+        }else{
+            header('Location: ../resetpwd.php?uid='.$username.'&error=notfound');
+            exit();
+        }
+
+<div class="wrapper-main">
+    <main class="contact-form">
+            <form class= "form-sigin" action="" method="post">
+            <div> 
+                <?php
+
+                $username=$_GET['uid'];
+                $sql="SELECT q.question FROM users u JOIN questions1 q WHERE u.question1 =q.id AND (uidUsers= ? OR emailUser=?);";
+                $stmt= mysqli_stmt_init($conn);
+                if(!mysqli_stmt_prepare($stmt, $sql)){
+                    header('Location: ../index.php');
+                    exit();
+                }else{
+                    mysqli_stmt_bind_param($stmt, "ss", $username, $username);
+                    mysqli_stmt_execute($stmt);
+                    $resultCheck= mysqli_stmt_get_result($stmt);
+                    if($row=mysqli_fetch_assoc($resultCheck)){
+                        echo $row['question'];
+                    }
+
+                }
+                ?>
+            </div>
+            <input type="text" name="answer1" placeholder="Answer">
+            <div>
+            <?php
+                $username=$_GET['uid'];
+                $sql="SELECT q.question FROM users u JOIN questions1 q WHERE u.question2 =q.id AND (uidUsers= ?  OR emailUser=?);";
+                $stmt= mysqli_stmt_init($conn);
+                if(!mysqli_stmt_prepare($stmt, $sql)){
+                    header('Location: ../index.php');
+                    exit();
+                }else{
+                    mysqli_stmt_bind_param($stmt, "ss", $username, $username);
+                    mysqli_stmt_execute($stmt);
+                    $resultCheck= mysqli_stmt_get_result($stmt);
+                    if($row=mysqli_fetch_assoc($resultCheck)){
+                        echo $row['question'];
+                    }
+
+                }
+                ?>
+            </div>
+            <input type="text" name="answer2" placeholder="Answer">    
+            <button type="submit" name="submit-answers"> Submit </button>     
+            </form>
+    </main>
+</div>
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: FreeMono, monospace;
+}
+body{
+
+    background-size: cover;
+    width: 100%;
+}
+header{
+    width: 100%;
+    text-align: left;
+    display: inline-flex;
+    height: 50px;
+    background-color: rgb(138, 8, 69);
+    box-shadow:0px 5px 10px blanchedalmond;
+    font-size: 18px;
+    position: sticky;
+    
+}
+.header ul{
+    display: inline-block;
+}
+header ul li {
+    list-style: none;
+    display: inline-block;
+}
+header ul li a{
+    padding:  20px 20px;
+    display: block;
+    color: black;
+    font-weight: bold;
+}
+header ul li :hover{
+    background-color: black;
+    color: blanchedalmond;  
+    box-shadow: 0px 1px 10px black;
+    border-radius: 5px;
+}
+.header-login{
+    display: inline-flex;
+    float: left;
+    padding: 10px;
+    margin-left: 20%;
+}
+.header-login form input{
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffbb99;
+    color: black;
+    padding: 2px;
+}
+.header-login button{
+    font-size: 12px;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: black;
+    border: none;
+    box-shadow: 2px 2px 5px black;
+    color: blanchedalmond;
+}
+
+.wrapper-main{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+}
+.contact-form{
+    max-width: 550px;
+    margin: 0 auto;
+    background: blanchedalmond;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+/*.form-sigin{
+    display:flex;
+    flex-direction: column;
+}*/
+.input{
+    background-color: #ffbb99;
+    border: none;
+    font-size: 18px;
+    margin: 10px 0;
+    border-bottom: 3px solid black;
+    padding: 10px;
+    color: black;
+    flex-direction: column;
+}
+#browsers{
+    background-color: #ffbb99;
+    border: none;
+    font-size: 18px;
+    margin: 10px 0;
+    border-bottom: 3px solid black;
+    padding: 10px;
+    color: black;
+}
+@media only screen and (min-width: 800px){
+    header{
+        width: 100%;
+        display: inline-flex;
+        border-bottom: 3px solid #e65c00 ;
+        align-content: space-between;
+        justify-content: space-around;
+}
+    }
+    .header-logo{
+        width: 90px;
+        height: 80px;
+    }
+    .up-meniu{
+        display: inline-block;
+        width: fit-content;
+    }
+    .minimeniu{
+        display: block;
+        float: left;
+        width: fit-content;
+        border: none;
+        height: 78px;
+    }
+    .minimeniu ul{
+        display: block;
+        width: fit-content;
+    }
+    .minimeniu ul li a{
+        font-size: 20px;
+    }
+    .header-login{
+        width: fit-content;
+        display: block;
+    }
+    .login{
+        display: block;
+        float: left;
+    }
+}
+
+    header{
+        width: 100%;
+        
+    }
+    .header-logo{
+        background-color: white;
+        height: 70px;
+        width: fit-content;
+        float: left;
+        border-right: 3px solid #e65c00 ;
+    }
+    .header-logo img{
+        height: 70px;
+        width: 70px;
+        
+    }
+    .upmeniu{
+        display: inline-block;
+        
+    }
+    .minimeniu{
+        width: calc(100% -90px);
+        height: 70px;
+        padding-bottom: 3px;
+        border-bottom: 3px solid #e65c00;
+    
+    }
+    .minimeniu ul{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .minimeniu ul li a{
+        font-size: 24px;
+    }
+    .header-login form input{
+        font-size: 16px;
+    }
+    .header-login button{
+        font-size: 16px;
+        font-weight: thin;
+    }
+    .register-links a{
+        font-size: 18px; 
+        font-weight: 500; 
+    }

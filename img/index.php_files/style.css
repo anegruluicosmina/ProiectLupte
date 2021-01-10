@@ -1,0 +1,28 @@
+.nav-header-main{
+    width: 100%;
+    height: 15%;
+    display: block;
+}
+.nav-header-main ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+ li{
+     float: left;
+ }
+ .nav-header-main li a{
+     display: block;
+     color: black;
+     text-align: center;
+     padding: 5%;
+     text-decoration: none;
+ }
+.header-logo img{
+    width: 5%;
+    height: 5%;
+}
+.header-login{
+ float: right;
+}

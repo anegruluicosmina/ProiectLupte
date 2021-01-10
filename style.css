@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+img {
+    width: 250px;
+}
+body {
+    width: 100vh;
+    background-color: #1b1b1b;
+}
+.header-body{
+    height: fit-content;
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b1b1b;
+}
+.header-body p{
+    font-family: arial;
+    font-size: 24px;
+    color: #fff;
+    padding-bottom: 4px;
+}
+.header-body h2{
+    line-height: 45px;
+    font-family: 'Acme', sans-serif;
+    font-size: 38px;
+    color: #f8b700;
+}
+.interface{
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b;
+    flex-direction: column;
+}
+.interface a{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.interface img {
+    width: 250px !important; 
+}
+.interface div{
+    padding: 0 10px 0 20px;
+    width: 750px;
+}
+.interface a:hover{
+    background-color: #252525;
+    border-radius: 3px;
+}
+.interface h3{
+    font-size: 36px;
+    font-family: 'Acme', sans-serif;
+    color: #f8b700;
+    padding: 12px 0 4px;
+}
+.interface p{
+    font-size: 25px;
+    line-height: 30px;
+    font-family: arial;
+    color: #d5c8af;
+}
+div.choosen-player{
+    display: flex;
+    align-items: center;
+    margin-top: 20px 0px;
+    background-color: #1b1b1b;
+    width: fit-content!important;
+}
+.choosen-player p{
+    width:fit-content!important;
+}
+.choosen-player div{
+    width: fit-content;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 10px;
+    background-color: #1b1b1b;
+}
+.action a{
+    font-size: 42px;
+    margin: 15px 0px;
+    color: #f89000;
+    font-family: arial;
+    font-weight: bolder;
+}
+.actions a:nth-of-type(1) {
+    background-color: #e64747;
+  }
+  
+  .actions a:nth-of-type(2) {
+    background-color: #e6ce47;
+  }
+  
+  .actions a:nth-of-type(3) {
+    background-color: #6de647;
+  }
+  
+  .actions a:hover {
+    opacity: 0.9;
+  }
+
+  .arena{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #3d3832;
+      font-size: 50px;
+      letter-spacing: 7px;
+      font-family: Brush Script MT, Brush Script Std, cursive;
+      background-color: #1b1b1b;
+  }
+  .arena h3{
+      font-size: 50px;
+  }
+  .enemy{
+      padding: 20px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1b1b1b;
+  }
+  .enemy img{
+      width: 250px; 
+  }
+  .enemy div{
+    padding: 0 10px 0 20px;
+  }
+  .enemy h3{
+    font-size: 36px;
+    font-family: 'Acme', sans-serif;
+    color: #f8b700;
+    padding: 12px 0 4px;
+  }
+  .enemy p{
+    font-size: 25px;
+    font-family: arial;
+    color: #d5c8af;
+    line-height: 30px;
+}
+.player-message, .attack-messages, .enemy-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: arial;
+    font-size:28px!important;
+    line-height: 30px;
+    letter-spacing: normal;
+    color:#f89000;
+    font-weight: 100;
+    background-color: #1b1b1b;
+}
+.final-message .attack-messages{
+    font-size: 30px!important;
+    color: #f8b700;
+    line-height: 30px;
+    font-weight: 600;
+    background-color: #1b1b1b;
+}
+
+@media only screen and (min-width: 650px){
+    body {
+        width: 100%;
+    }
+    .header-body p {
+        font-size: 18px;
+    }
+    .header-body h2{
+        font-size: 22px;
+    }
+    .interface a{
+        width: 1000px;
+    }
+    .interface h3 {
+        font-size: 22px;
+    }
+    .interface p {
+        font-size: 18px;
+    }
+
+    .action a{
+        font-size: 30px;
+    }
+    .enemy h3{
+        font-size: 22px;
+    }
+    .enemy p{
+        font-size: 18px;
+    }
+    .player-message, .attack-messages, .enemy-message{
+        font-size: 20px;
+    }
+    .final-message .attack-messages{
+        font-size: 25px;
+    }
+}

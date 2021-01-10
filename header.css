@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    background-color: #1b1b1b;
+    width: fit-content
+}
+header{
+    width: 100%;
+    margin-bottom: 40px;
+}
+.up-meniu .header-logo{
+    background-color: #2f2f2f;
+    height: 100px;
+    
+}
+.header-logo img{
+    height: 90px;
+    width: 90px;
+    display: block;
+    margin: 0 auto;
+}
+.user-loged{
+    display: inline-block;
+    background-color: #272727;
+}
+.minimeniu{
+    width: 100%;
+    height: 70px;
+    background-color: #272727;
+}
+.minimeniu ul{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f2f2f;
+    
+}
+.minimeniu ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 15px 8px;
+
+}
+.minimeniu ul li a{
+    line-height: 50px;
+    padding: 10px 10px;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #f8b700;
+}
+.minimeniu ul li :hover{
+    color: #f8b700;  
+    box-shadow: 0px 0px 5px rgb(250, 190, 101);
+    border-radius: 5px;
+}
+.header-login{
+    background-color: #2f2f2f;
+    font-size: 24px;
+    font-weight: 500;
+    color: #f8b700;
+    text-align: center;
+}
+.header-login p {
+    color: #fff;
+    font-size: 20px;
+}
+.header-login form{
+    background-color:  #2f2f2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+.header-login form input{
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #5f4600;
+    background-color: #1b1b1b;
+    color: #f8b700;
+    display: inline-block;
+    padding: 5px;
+    margin: 3px;
+}
+.header-login button{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 6px;
+    border: none;
+    margin: 3px;
+    border: 1px solid #5f4600;
+    color: #f8b700;
+    background-color: #1b1b1b;
+    border-radius: 5px;
+    width: 100px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #5f4600;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #5f4600;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #5f4600;
+  }
+.register-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#2f2f2f;
+}
+.register-links a{
+    font-size: 22px; 
+    text-transform: capitalize;
+    font-weight: bold; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #f8b700; 
+    padding: 5px 40px;
+}
+
+@media only screen and (min-width: 650px){
+    header{
+        width: 100vw;
+        display: inline-flex;
+    }
+    .header-logo{
+        background-color: #1b1b11;
+        height: 70px;
+        width: fit-content;
+        float: left;
+    }
+    .header-logo img{
+        height: 70px;
+        width: 70px;
+        
+    }
+    .up-meniu{
+        display: inline-flex;
+        width: fit-content;
+        background-color: #2f2f2f;
+    }
+
+    .minimeniu ul{
+        width: fit-content;
+    }
+    .minimeniu ul li{
+        padding: 15px 10px;
+    
+    }
+    .minimeniu ul li a{
+        padding: 10px 5px;
+        font-size: 16px;
+    }
+    .header-login{
+        display: inline-flex;
+        width: -webkit-fill-available;
+        justify-content: space-around;
+    }
+    .header-login form input{
+        font-size: 16px;
+    }
+    .header-login button{
+        font-size: 14px;
+        font-weight: thin;
+    }
+    .register-links a{
+        font-size: 16px; 
+        font-weight: 500; 
+    }
+    .user-loged{
+        background-color: #2f2f2f;
+        display: inline-flex;
+        align-items: center;
+        width: -webkit-fill-available;
+        justify-content: space-around;
+    }
+    .login{
+        display:inline-flex;
+    }
+    .register-links a{
+        display: inline-flex;
+        font-weight: 400;
+    padding: 5px 10px;
+    }
+}
+/*
+@media only screen and (min-width: 800px){
+    header{
+        width: 100%;
+        display: inline-flex;
+        border-bottom: 3px solid #e65c00 ;
+        align-content: space-between;
+        justify-content: space-around;
+}
+    .header-logo{
+        width: 90px;
+        height: 80px;
+    }
+    .up-meniu{
+        display: inline-block;
+        width: fit-content;
+        border: none;
+        
+    }
+    .minimeniu{
+        display: block;
+        float: left;
+        width: fit-content;
+        border: none;
+        height: 78px;
+        border-right: 3px solid #e65c00 ;
+        padding-right: 10px;
+    }
+    .minimeniu ul{
+        display: block;
+        width: fit-content;
+    }
+    .minimeniu ul li a{
+        font-size: 20px;
+    }
+    .header-login{
+        display: flex;
+        width: 40%;
+        justify-content: center;
+    }
+    .login{
+        display: inline-flex;
+        padding: 5px 0;
+    }
+    .login form{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .user-loged{
+        padding: 10px 0;
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    .user-loged form button{
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+
+}
